@@ -4,17 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
+h1 {
+    text-align: center; /* Centrează textul pe orizontală */
+    font-size: 36px; /* Dimensiunea titlului */
+    font-weight: bold; /* Face textul îngroșat */
+    margin-top: 20px; /* Adaugă spațiu de sus */
+    color: #333; /* Schimbă culoarea, dacă dorești */
+}
+
 header {
     background: #2c3e50;
     color: white;
     padding: 10px 20px;
     text-align: center;
 }
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
+
 section {
     padding: 20px;
     border-bottom: 1px solid #ddd;

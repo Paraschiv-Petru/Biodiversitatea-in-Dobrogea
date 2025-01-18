@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Folosește flexbox pentru a organiza elementele pe orizontală */
+}
+
+section {
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Adaugă o margine pe dreapta pentru a separa textul de restul paginii */
+    width: 50%; /* Jumătatea stângă a ecranului */
+    text-align: left; /* Aliniază textul la stânga */
+}
+
+aside {
+    width: 50%; /* Jumătatea dreaptă a ecranului, pentru imagini sau alte elemente */
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+}
