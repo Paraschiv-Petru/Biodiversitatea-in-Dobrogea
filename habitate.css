@@ -18,17 +18,7 @@ aside {
     background-color: #f4f4f4;
     padding: 20px;
 }
-#imagine-secundara {
-    display: flex; /* Aliniază imaginile pe orizontală */
-    gap: 20px; /* Adaugă un spațiu între imagini */
-    justify-content: space-between; /* Asigură distribuirea egală a spațiului între imagini */
-}
 
-.imagine {
-    width: 48%; /* Lățimea imaginilor va fi de aproximativ 50% din container */
-    height: auto; /* Menține proporțiile imaginilor */
-    object-fit: contain; /* Asigură că imaginea se încadrează complet în spațiu, fără a fi tăiată */
-}
 
 h1 {
     text-align: center;
