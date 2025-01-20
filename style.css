@@ -1,31 +1,135 @@
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stil pentru întregul site */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-h1 {
-    text-align: center; /* Centrează textul pe orizontală */
-    font-size: 36px; /* Dimensiunea titlului */
-    font-weight: bold; /* Face textul îngroșat */
-    margin-top: 20px; /* Adaugă spațiu de sus */
-    color: #333; /* Schimbă culoarea, dacă dorești */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Stil pentru antet și navigație */
 header {
     background: #2c3e50;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
-section {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Stil pentru secțiuni */
+section {
+    padding: 30px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Stil pentru paragrafe */
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Stil pentru butoane */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1a252f;
+}
+
+/* Stil pentru footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background: #2c3e50;
     color: white;
 }
+
+/* Efect de derulare lină între secțiuni */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsivitate pentru dispozitive mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+

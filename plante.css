@@ -1,51 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
-    display: flex; /* Folosește flexbox pentru a organiza elementele pe orizontală */
+    display: flex;
+    flex-direction: column; /* Asigură o organizare verticală */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 section {
-    padding: 20px;
-    border-right: 1px solid #ddd; /* Adaugă o margine pe dreapta pentru a separa textul de restul paginii */
-    width: 50%; /* Jumătatea stângă a ecranului */
-    text-align: left; /* Aliniază textul la stânga */
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 aside {
-    width: 50%; /* Jumătatea dreaptă a ecranului, pentru imagini sau alte elemente */
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-/* Stiluri pentru imagine */
-#imagine-secundara {
-    text-align: center; /* Centerizează imaginile */
-    margin-bottom: 20px; /* Adaugă un spațiu sub imagini */
-}
-
-.imagine {
-    width: 30%; /* Imaginile vor ocupa 100% din lățimea containerului */
-    height: auto; /* Menține proporțiile imaginii */
-    margin-bottom: 100px; /* Adaugă spațiu între imagini */
-}
-
-/* Stiluri pentru hartă */
-#map {
-    margin: 0 auto; /* Centrează harta pe pagină */
+    padding: 60px;
+    background-color: #eaf2e3;
+    text-align: center;
+    
 }
 
 h1 {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
-    margin-top: 20px;
-    color: #333;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background: #2c3e50;
     color: white;
+    font-size: 14px;
+}
+
+#imagine-secundara {
+    text-align: center;
+    margin-bottom: 50px; /* Ajustează această valoare pentru mai mult spațiu */
+}
+
+
+.imagine {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagine:hover {
+    transform: scale(1.05);
+}
+
+
+/* Containerul pentru hartă */
+/* Containerul pentru hartă */
+#map-container {
+    display: flex;
+    justify-content: center; /* Centrează harta pe orizontală */
+    align-items: center; /* Centrează harta pe verticală */
+    height: 500px; /* Înălțimea containerului */
+    width: 1000px; /* Lățimea containerului */
+    overflow: hidden; /* Ascunde orice depășire a hărții */
+    margin: 0 auto; /* Centrează containerul pe pagină (opțional) */
+}
+
+/* Harta */
+#map {
+    width: 100%; /* Lățimea hărții va fi 100% din container */
+    height: 100%; /* Înălțimea hărții va fi 100% din container */
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    bottom: 50px;
+}
+
+
+
+/* Media Queries pentru dispozitive mobile */
+@media (max-width: 768px) {
+    section, aside {
+        width: 100%; /* Toate elementele vor ocupa 100% din lățime pe ecrane mici */
+        margin: 0;
+    }
+    .imagine {
+        width: 100%;
+    }
 }
