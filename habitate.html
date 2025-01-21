@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecosisteme Dobrogene: Viața și Echilibrul Naturii</title>
     <link rel="stylesheet" href="habitate.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZPYhaQr3a9KRkNqx_NV4vyX03JbacsY&callback=initMap" async defer></script>
 </head>
 <body>
     <section id="animale_informatii">
-        <h1>
-            Ecosisteme Dobrogene: Viața și Echilibrul Naturii
-        </h1>
+        <header>
+            <h1>
+                Ecosisteme Dobrogene: Viața și Echilibrul Naturii
+            </h1>
+        </header>
 
         <p>
             Dobrogea se distinge printr-o diversitate ecologică rar întâlnită în alte părți ale lumii. 
@@ -44,9 +47,49 @@
         </p>
     </section>
     
-
+    <div id="map-container">
+        <div id="map"></div> <!-- Harta va fi centrată aici -->
+    </div>
+    
     <footer>
         <p>&copy; 2025 Habitate Dobrogene</p>
     </footer>
+
+
+    <script>
+        // Funcția care inițializează harta
+        function initMap() {
+            var dobrogea = { lat: 44.1667, lng: 28.6 }; // Coordonatele Dobrogei
+
+            // Opțiuni pentru stilurile hărții
+            var mapStyle = [
+                {
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "on" // Asigură-te că etichetele sunt vizibile
+                        }
+                    ]
+                }
+            ];
+
+            // Opțiuni pentru hartă
+            var mapOptions = {
+                center: dobrogea,
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                styles: mapStyle
+            };
+
+            // Creează harta și o afișează în div-ul cu id-ul "map"
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+        
+        // Apelează funcția pentru a încărca harta atunci când pagina este complet încărcată
+        window.onload = function() {
+            initMap();
+        }
+    </script>
+
 </body>
 </html>

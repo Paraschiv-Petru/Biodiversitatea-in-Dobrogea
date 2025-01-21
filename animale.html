@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumea Vie a Dobrogei: Fauna Regiunii și Importanța Ei Ecologică</title>
-    <link rel="stylesheet" href="animale.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lumea Vie a Dobrogei: Fauna Regiunii și Importanța Ei Ecologică</title>
+        <link rel="stylesheet" href="animale.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZPYhaQr3a9KRkNqx_NV4vyX03JbacsY&callback=initMap" async defer></script>
+    </head>
 </head>
 <body>
     <section id="animale_informatii">
-        <h1>
-            Lumea Vie a Dobrogei: Fauna Regiunii și Importanța Ei Ecologică
-        </h1>
+        <header>
+            <h1>Lumea Vie a Dobrogei: Fauna Regiunii și Importanța Ei Ecologică</h1>
+        </header>
 
         <p>
             Dobrogea este un loc unde natura este într-o continuă mișcare, iar fauna sa este una dintre cele mai bogate și variate din România. 
@@ -54,8 +57,31 @@
     </section>
     
 
+   
+
+    <script>
+        function initMap() {
+            var dobrogea = { lat: 44.1667, lng: 28.6 };
+            var mapOptions = {
+                center: dobrogea,
+                zoom: 9,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+
+        window.onload = function() {
+            initMap();
+        };
+    </script>
+
+    <div id="map-container">
+        <div id="map"></div> <!-- Harta va fi centrată aici -->
+    </div>
+
     <footer>
         <p>&copy; 2025 Fauna Dobrogeană</p>
     </footer>
+
 </body>
 </html>

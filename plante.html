@@ -10,18 +10,15 @@
 </head>
 
 <body>
-    <header>
-        <h1>Flora Dobrogeană</h1>
-       
-    </header>
 
     <main>
         <!-- Adaugă un div pentru a încărca harta -->
         <section id="plante_informatii">
-            <h1>
-                Comorile Verzi ale Dobrogei: Diversitatea Floristică a Regiunii
-            </h1>
-
+            <header>
+                <h1>
+                    Comorile Verzi ale Dobrogei: Diversitatea Floristică a Regiunii
+                </h1>
+            </header>
             <p>
                 Dobrogea este o regiune excepțională, care se distinge nu doar prin diversitatea sa geografică și istorică, 
                 dar și prin bogăția botanică care o definește. Situată la intersecția dintre zonele climatice temperate și mediteraneene, 
@@ -57,23 +54,32 @@
         </section>
         
         <aside id="imagine-secundara">
-            <img src="Stipa capillata.png" alt="Plante Dobrogea" class="imagine">
-            <img src="Stipa_lessingiana_steppe.png" alt="Plante Dobrogea" class="imagine">
+            <div class="image-container">
+                <img src="colilie.png" alt="colilie" class="imagine" title="Colilie">
+                <div class="tooltip">Colilie</div>
+            </div>
+            <div class="image-container">
+                <img src="carpen.png" alt="carpen" class="imagine" title="Carpen">
+                <div class="tooltip">Carpen</div>
+            </div>
+            <div class="image-container">
+                <img src="cel-mai-mare-stejar-din-delta-dunarii.png" alt="cel mai mare stejar din delta dunarii" class="imagine" title="Cel mai mare stejar din Delta Dunării">
+                <div class="tooltip">Cel mai mare stejar din Delta Dunării</div>
+            </div>
+            <div class="image-container">
+                <img src="tei pucios.png" alt="tei" class="imagine" title="Tei Pucios">
+                <div class="tooltip">Tei Pucios</div>
+            </div>
+            <div class="image-container">
+                <img src="bujor.png" alt="bujor" class="imagine" title="Bujor">
+                <div class="tooltip">Bujor</div>
+            </div>
         </aside>
         
-        <!-- Container pentru harta -->
-        <div id="map-container">
-            <div id="map"></div> <!-- Harta va fi centrată aici -->
-        </div>
-        
-        <!-- Harta va fi plasată sub poze -->
-        
-    </main>
-        <footer>
-            <p>&copy; 2025 Flora Dobrogeană</p>
-        </footer>
         
         
+        
+    </main>            
         
         <script>
             // Funcția care inițializează harta
@@ -109,6 +115,15 @@
                 initMap();
             }
         </script>
+
+    <div id="map-container">
+        <div id="map"></div> <!-- Harta va fi centrată aici -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Flora Dobrogeană</p>
+    </footer>
+    
 </body>
 
 </html>
