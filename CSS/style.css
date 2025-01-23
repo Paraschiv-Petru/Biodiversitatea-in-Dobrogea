@@ -19,7 +19,9 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    position: relative; /* Asigură că #hamburger-menu se poziționează relativ la acest element */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
@@ -48,9 +50,6 @@ header h1 {
     z-index: 1200;
 }
 
-/* Meniul hamburger care este ascuns inițial */
-/* Meniul hamburger care este ascuns inițial */
-/* Meniul hamburger care este ascuns inițial */
 /* Meniul hamburger care este ascuns inițial */
 .menu {
     display: none;
@@ -85,15 +84,15 @@ header h1 {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 20px 30px; /* Păstrează hitbox-ul mai mic */
+    padding: 20px 30px;
     font-size: 24px;
     transition: background 0.3s;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linii de separare între elemente */
-    margin-top: 25px; /* Distanță doar între butoane */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 25px;
 }
 
 .menu ul li a:first-child {
-    margin-top: 0; /* Elimină distanța de sus pentru primul buton */
+    margin-top: 0;
 }
 
 .menu ul li a:hover {
@@ -110,6 +109,7 @@ header h1 {
         width: 100%;
     }
 }
+
 /* Stil pentru secțiuni */
 section {
     padding: 30px;
