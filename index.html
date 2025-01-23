@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversitatea din Dobrogea</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1>Biodiversitatea din Dobrogea</h1>
+        <div id="hamburger-menu-container">
+            <div id="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Simbolul hamburger -->
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="HTML/plante.html">Plante</a></li>
+                    <li><a href="HTML/animale.html">Animale</a></li>
+                    <li><a href="HTML/habitate.html">Habitate</a></li>
+                    <li><a href="HTML/resurse.html">Resurse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <script src="JS/script-meniu.js"></script>
+
+    <!--<section id="biodiversitatea-in-dobrogea">
+        <h2>Despre Dobrogea</h2>
+        <p>Dobrogea este o regiune impresionantă, recunoscută pentru biodiversitatea sa unică.</p>
+    </section>-->
+
+    <section id="plante">
+        <h2>Comorile Verzi ale Dobrogei: Diversitatea Floristică a Regiunii</h2>
+        <img src="poze/pornire/plante.png" alt="Flora Dobrogei">
+        <p>
+            Dobrogea este o adevărată comoară botanică, găzduind o varietate impresionantă de specii de plante.
+        </p>
+        <button onclick="location.href='HTML/plante.html'">Despre plante</button>
+    </section>
+
+    <section id="animale">
+        <h2>Lumea Vie a Dobrogei: Fauna Regiunii și Importanța Ei Ecologică</h2>
+        <img src="poze/pornire/animale.png" alt="Fauna Dobrogei">
+        <p>
+            Dobrogea este recunoscută pentru bogăția sa faunistică, fiind un punct de atracție pentru pasionații de natură.
+        </p>
+        <button onclick="location.href='HTML/animale.html'">Despre animale</button>
+    </section>
+    
+    <section id="habitate">
+        <h2>Ecosisteme Dobrogene: Viața și Echilibrul Naturii</h2>
+        <img src="poze/pornire/habitate.png" alt="Habitate naturale din Dobrogea">
+        <p>
+            Dobrogea impresionează prin diversitatea habitatelor sale naturale, de la stâncile aride la ecosistemele din Delta Dunării.
+        </p>
+        <button onclick="location.href='HTML/habitate.html'">Despre habitate</button>
+    </section>
+
+    <section id="resurse">
+        <h2>Resurse utilizate</h2>
+        <button onclick="location.href='HTML/resurse.html'">Vezi resursele utilizate</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Biodiversitatea din Dobrogea</p>
+    </footer>
+
+    
+
+</body>
+</html>
