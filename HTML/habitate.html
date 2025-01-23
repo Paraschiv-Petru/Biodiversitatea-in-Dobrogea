@@ -61,51 +61,65 @@
             adaptate la mediul marin. Aceste zone sunt esențiale pentru numeroase specii de păsări de coastă și 
             viețuitoare marine, cum ar fi crabi și diverse specii de pești.
         </p>
-    </section>
+    </section>   
+
+
+    <aside id="imagine-secundara">
+        <div class="image-container">
+            <img src="../poze/habitate/Cheile Dobrogei și Podișul Casimcei.webp" alt="Cheile Dobrogei și Podișul Casimcei" class="imagine" title="Cheile Dobrogei și Podișul Casimcei">
+            <div class="tooltip">Cheile Dobrogei și Podișul Casimcei</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Delta Dunării.webp" alt="Delta Dunării" class="imagine" title="Delta Dunării">
+            <div class="tooltip">Delta Dunării</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Litoralul Mării Negre.jpg" alt="Litoralul Mării Negre" class="imagine" title="Litoralul Mării Negre">
+            <div class="tooltip">Litoralul Mării Negre</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Munţii Măcinului - locul unde păşeşti pe roci mai vechi decât dinozaurii.webp" alt="Munţii Măcinului" class="imagine" title="Munţii Măcinului">
+            <div class="tooltip">Munţii Măcinului</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Parcul Naţional Munţii Măcinului.jpg" alt="Parcul Naţional Munţii Măcinului" class="imagine" title="Parcul Naţional Munţii Măcinului">
+            <div class="tooltip">Parcul Naţional Munţii Măcinului</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Podişul Nord Dobrogean.jpg" alt="Podişul Nord Dobrogean" class="imagine" title="Podişul Nord Dobrogean">
+            <div class="tooltip">Podişul Nord Dobrogean</div>
+        </div>        
+    </aside>
+    
     
     <div id="map-container">
         <div id="map"></div> <!-- Harta va fi centrată aici -->
     </div>
+    <script>
+        function initMap() {
+            var dobrogea = { lat: 44.1667, lng: 28.6 };
+            var mapOptions = {
+                center: dobrogea,
+                zoom: 9,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+
+        window.onload = function() {
+            initMap();
+        };
+    </script>
     
+
     <footer>
         <p>&copy; 2025 Habitate Dobrogene</p>
     </footer>
-
-
-    <script>
-        // Funcția care inițializează harta
-        function initMap() {
-            var dobrogea = { lat: 44.1667, lng: 28.6 }; // Coordonatele Dobrogei
-
-            // Opțiuni pentru stilurile hărții
-            var mapStyle = [
-                {
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "on" // Asigură-te că etichetele sunt vizibile
-                        }
-                    ]
-                }
-            ];
-
-            // Opțiuni pentru hartă
-            var mapOptions = {
-                center: dobrogea,
-                zoom: 12,
-                mapTypeId: google.maps.MapTypeId.HYBRID,
-                styles: mapStyle
-            };
-
-            // Creează harta și o afișează în div-ul cu id-ul "map"
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        }
-        
-        // Apelează funcția pentru a încărca harta atunci când pagina este complet încărcată
-        window.onload = function() {
-            initMap();
-        }
-    </script>
 
 </body>
 </html>
