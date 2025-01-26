@@ -9,38 +9,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-h1 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: white; /* Setează culoarea titlului la alb pentru a fi vizibil pe fundalul închis */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-section {
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-aside {
-    padding: 60px;
-    background-color: #eaf2e3;
-    text-align: center;
-    
-}
 #hamburger-menu {
     font-size: 30px;
     cursor: pointer;
@@ -123,12 +91,39 @@ aside {
     }
 }
 
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white; /* Setează culoarea titlului la alb pentru a fi vizibil pe fundalul închis */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 section {
-    padding: 30px;
+    padding: 60px;
     background: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
+
+aside {
+    padding: 60px;
+    background-color: #eaf2e3;
+    text-align: center;
+    
+}
+
 
 
 #imagine-secundara {

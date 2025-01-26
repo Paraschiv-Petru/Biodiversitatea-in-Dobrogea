@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosisteme Dobrogene: Viața și Echilibrul Naturii</title>
+    <link rel="stylesheet" href="../CSS/habitate.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZPYhaQr3a9KRkNqx_NV4vyX03JbacsY&callback=initMap" async defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>
+            Ecosisteme Dobrogene: Viața și Echilibrul Naturii
+        </h1>
+    </header>
+    <div id="hamburger-menu-container">
+        <div id="hamburger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Simbolul hamburger -->
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="../Acasă.html">Acasă</a></li>
+                <li><a href="Plante.html">Plante</a></li>
+                <li><a href="Animale.html">Animale</a></li>
+                <li><a href="Habitate.html">Habitate</a></li>
+                <li><a href="Surse.html">Surse</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section>
+        <script src="../JS/script-meniu.js"></script>
+        <p>
+            <a href=https://ro.wikipedia.org/wiki/Dobrogea target="_blank">Dobrogea</a> se evidențiază printr-o diversitate ecologică abundentă. 
+            Regiunea este formată dintr-o serie de habitate care variază de la stepele aride și 
+            pajiștile secetoase, până la zonele umede și bogate în viață ale <a href=https://ro.wikipedia.org/wiki/Delta_Dun%C4%83rii target="_blank">Deltei Dunării</a>. 
+            Această diversitate de medii ecologice a permis dezvoltarea unui spectru larg de specii de plante și 
+            animale, care trăiesc într-un echilibru natural extraordinar, dar și fragil.
+        </p>
+
+        <p>
+            Habitatele dobrogene includ atât zone de stepă, care se întind pe vaste întinderi de teren plat și uscat, 
+            cât și păduri de deal, care sunt adăpost pentru o floră și faună deosebită. Stepele din Dobrogea sunt deosebit 
+            de importante pentru conservarea unor specii rare de plante și animale, care au evoluat pentru a face față unor 
+            condiții de viață extreme. Aceste zone sunt acoperite cu ierburi perene, cu rădăcini adânci, ce ajută la menținerea 
+            rigidității solului și la prevenirea eroziunilor. În aceste stepe, găsim specii precum paioșul de stepă (Stipa capillata) 
+            și colilia (Stipa lessingiana), care sunt rezistente la secetă și condiții de sol sărac.
+        </p>   
+
+        <p>
+            În contrast, zonele umede ale Deltei Dunării formează o rețea de canale, lacuri și bălți, ce adăpostesc 
+            viață acvatică și plante de mal, precum papura și stuful. Aceste zone sunt esențiale pentru 
+            păsările migratoare, oferindu-le locuri de odihnă și hrană pe parcursul migrațiilor lor. De asemenea, 
+            Delta Dunării joacă un rol și în filtrarea apei și menținerea unui ecosistem funcțional și sănătos.
+        </p>
+
+        <p>
+            Litoralul <a href=https://ro.wikipedia.org/wiki/Marea_Neagr%C4%83 target="_blank">Mării Negre</a> adaugă o dimensiune ecologică distinctă regiunii, 
+            cu dune de nisip și zone costiere ce găzduiesc specii rare de plante și animale 
+            adaptate la mediul marin. Aceste zone sunt esențiale pentru numeroase specii de păsări de coastă și 
+            viețuitoare marine, cum ar fi crabi și diverse specii de pești.
+        </p>
+    </section>   
+
+
+    <aside id="imagine-secundara">
+        <div class="image-container">
+            <img src="../poze/habitate/Cheile Dobrogei și Podișul Casimcei.webp" alt="Cheile Dobrogei și Podișul Casimcei" class="imagine" title="Cheile Dobrogei și Podișul Casimcei">
+            <div class="tooltip">Cheile Dobrogei și Podișul Casimcei</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Delta Dunării.webp" alt="Delta Dunării" class="imagine" title="Delta Dunării">
+            <div class="tooltip">Delta Dunării</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Litoralul Mării Negre.jpg" alt="Litoralul Mării Negre" class="imagine" title="Litoralul Mării Negre">
+            <div class="tooltip">Litoralul Mării Negre</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Munţii Măcinului - locul unde păşeşti pe roci mai vechi decât dinozaurii.webp" alt="Munţii Măcinului" class="imagine" title="Munţii Măcinului">
+            <div class="tooltip">Munţii Măcinului</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Parcul Naţional Munţii Măcinului.jpg" alt="Parcul Naţional Munţii Măcinului" class="imagine" title="Parcul Naţional Munţii Măcinului">
+            <div class="tooltip">Parcul Naţional Munţii Măcinului</div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../poze/habitate/Podişul Nord Dobrogean.jpg" alt="Podişul Nord Dobrogean" class="imagine" title="Podişul Nord Dobrogean">
+            <div class="tooltip">Podişul Nord Dobrogean</div>
+        </div>        
+    </aside>
+    
+    
+    <div id="map-container">
+        <div id="map"></div> <!-- Harta va fi centrată aici -->
+    </div>
+    <script>
+        function initMap() {
+            var dobrogea = { lat: 44.1667, lng: 28.6 };
+            var mapOptions = {
+                center: dobrogea,
+                zoom: 7,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+
+        window.onload = function() {
+            initMap();
+        };
+    </script>
+    
+
+    <footer>
+        <p>Habitate Dobrogene</p>
+    </footer>
+
+</body>
+</html>

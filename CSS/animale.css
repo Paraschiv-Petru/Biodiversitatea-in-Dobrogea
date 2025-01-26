@@ -30,7 +30,7 @@ h1 {
 }
 
 section {
-    padding: 30px;
+    padding: 60px;
     background: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -123,12 +123,6 @@ aside {
     .imagine {
         width: 100%;
     }
-}
-section {
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
 #imagine-secundara {
