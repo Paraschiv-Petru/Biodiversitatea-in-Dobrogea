@@ -11,7 +11,6 @@ body {
     overflow-y: scroll; /* Bara de scroll va fi mereu vizibilă */
 }
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -39,31 +38,31 @@ h1 {
 }
 
 #imagine-secundara {
-    text-align: center;
-    margin-bottom: 20px; /* Ajustează această valoare pentru mai mult spațiu */
     display: flex;
-    justify-content: center; /* Centrează pe orizontală */
-    align-items: center;     /* Centrează pe verticală (dacă este necesar) */
-    flex-grow: 1; /* Permite secțiunii imagine-secundara să ocupe restul spațiului */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-.imagine {
-    width: 100%;
-    max-width: 450px; /* Asigură dimensiuni maxime pentru imagini */
-    height: 350px;
+.imagine, .campia {
+    width: 500px !important;
+    height: 500px !important;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    position: relative;
 }
 
-.imagine:hover {
+.imagine:hover, .campia:hover {
     transform: scale(1.05);
 }
 
 .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    display: inline-block;
 }
 
 .tooltip {
@@ -150,17 +149,6 @@ h1 {
 
 .menu ul li a:hover {
     background: rgba(26, 188, 156, 0.7);
-}
-
-/* Media Queries pentru dispozitive mobile */
-@media (max-width: 768px) {
-    section, aside {
-        width: 100%;
-        margin: 0;
-    }
-    .imagine {
-        width: 100%;
-    }
 }
 
 footer {
