@@ -1,10 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Aliniază elementele pe verticală */
+    flex-direction: column;
     background-color: #f9f9f9;
     color: #333;
 }
@@ -79,7 +79,6 @@ body {
     background: rgba(26, 188, 156, 0.7);
 }
 
-
 /* Media Queries pentru dispozitive mobile */
 @media (max-width: 768px) {
     section, aside {
@@ -101,15 +100,18 @@ header {
     z-index: 1000;
 }
 
+
+
 h1 {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: white; /* Setează culoarea titlului la alb pentru a fi vizibil pe fundalul închis */
+    margin-bottom: 10px;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 section {
     padding: 60px;
     background: #fff;
